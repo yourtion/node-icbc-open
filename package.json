@@ -1,0 +1,40 @@
+{
+  "name": "icbc-open",
+  "version": "0.1.0",
+  "description": "工行开发平台 Node.js SDK",
+  "keywords": [
+    "icbc",
+    "icbc-open"
+  ],
+  "author": "YourtionGuo <yourtion@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typing": "dist/index.d.ts",
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js"
+  ],
+  "scripts": {
+    "pretest": "npm run lint && tsc",
+    "tag": "git tag v`node -p 'require(\"./package\").version'`",
+    "lint": "prettier --write src/**/*.ts",
+    "clean": "rm -rf dist",
+    "compile": "tsc",
+    "prepublishOnly": "npm run clean && npm run compile"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourtion/node-icbc-open.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourtion/node-icbc-open/issues"
+  },
+  "homepage": "https://github.com/yourtion/node-icbc-open#readme"
+}
