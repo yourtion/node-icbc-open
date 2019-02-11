@@ -1,6 +1,6 @@
 {
   "name": "icbc-open",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "工行开发平台 Node.js SDK",
   "keywords": [
     "icbc",
@@ -17,12 +17,16 @@
   "scripts": {
     "pretest": "npm run lint && tsc",
     "tag": "git tag v`node -p 'require(\"./package\").version'`",
-    "lint": "prettier --write src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
     "clean": "rm -rf dist",
     "compile": "tsc",
     "prepublishOnly": "npm run clean && npm run compile"
   },
+  "peerDependencies": {
+    "@types/node": "^10.12.24"
+  },
   "devDependencies": {
+    "@types/node": "^10.12.24",
     "typescript": "^3.3.3"
   },
   "prettier": {
